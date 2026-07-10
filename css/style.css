@@ -1,7 +1,8 @@
-/* นำเข้าฟอนต์สวยงาม */
+/* ==========================================
+   1. นำเข้าฟอนต์สวยงาม และตั้งค่าพื้นฐาน
+   ========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
 
-/* ตั้งค่าพื้นฐาน */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,9 @@
   font-family: 'Kanit', sans-serif;
 }
 
-/* พื้นหลังธีมกาแล็กซี */
+/* ==========================================
+   2. พื้นหลังธีมกาแล็กซี & เอฟเฟกต์ดวงดาว
+   ========================================== */
 body {
   background: linear-gradient(135deg, #0b0b2b 0%, #191947 40%, #2d1b69 70%, #1a1040 100%);
   color: #e6f0ff;
@@ -18,7 +21,7 @@ body {
   overflow-x: hidden;
 }
 
-/* เอฟเฟกต์ดาวกระจาย */
+/* สร้างจุดดาวระยิบระยับ */
 body::before {
   content: "";
   position: fixed;
@@ -33,16 +36,18 @@ body::before {
     radial-gradient(2px 2px at 90px 40px, #e0e9ff, transparent),
     radial-gradient(1px 1px at 130px 80px, #d4e0ff, transparent);
   background-size: 200px 200px;
-  animation: twinkle 10s ease-in-out infinite;
+  animation: twinkle 8s ease-in-out infinite;
   z-index: -1;
 }
 
 @keyframes twinkle {
-  0%, 100% { opacity: 0.6; }
+  0%, 100% { opacity: 0.5; }
   50% { opacity: 1; }
 }
 
-/* ส่วนเมนูนำทาง */
+/* ==========================================
+   3. แถบเมนูนำทาง (Navigation Bar)
+   ========================================== */
 nav {
   background: rgba(11, 11, 43, 0.85);
   padding: 1rem 5%;
@@ -51,12 +56,19 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid rgba(179, 199, 255, 0.2);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  color: #b3c7ff;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #b3c7ff, #ff007f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
 }
 
@@ -65,82 +77,45 @@ nav ul {
   gap: 1.5rem;
   list-style: none;
   flex-wrap: wrap;
-  margin-top: 0.5rem;
 }
 
 nav a {
   color: #e6f0ff;
   text-decoration: none;
   font-weight: 400;
-  transition: 0.3s;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
+  transition: all 0.3s ease;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
 }
 
 nav a:hover, nav a.active {
-  background: rgba(179, 199, 255, 0.2);
-  color: #cce0ff;
+  background: rgba(131, 56, 236, 0.3);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(131, 56, 236, 0.5);
 }
 
-/* ส่วนเนื้อหาหลัก */
+/* ==========================================
+   4. ส่วนเนื้อหาหลัก & หัวข้อ (Typography & Layout)
+   ========================================== */
 .container {
   max-width: 1000px;
-  margin: 2rem auto;
+  margin: 3rem auto;
   padding: 0 5%;
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #cce0ff;
-  border-bottom: 2px solid rgba(179, 199, 255, 0.3);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(179, 199, 255, 0.2);
   padding-bottom: 0.5rem;
+  text-shadow: 0 0 15px rgba(179, 199, 255, 0.4);
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin: 1.2rem 0 0.8rem;
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem;
   color: #b3c7ff;
 }
 
 p, li {
-  line-height: 1.8;
-  margin-bottom: 0.8rem;
-  font-weight: 300;
-}
-
-ul {
-  padding-left: 1.5rem;
-}
-
-/* กล่องข้อมูล */
-.box {
-  background: rgba(25, 25, 71, 0.5);
-  padding: 1.5rem;
-  border-radius: 10px;
-  border: 1px solid rgba(179, 199, 255, 0.2);
-  margin-bottom: 1.5rem;
-  backdrop-filter: blur(6px);
-}
-
-/* ส่วนท้ายหน้า */
-footer {
-  text-align: center;
-  padding: 1rem 5%;
-  background: rgba(11, 11, 43, 0.8);
-  margin-top: 2rem;
-  border-top: 1px solid rgba(179, 199, 255, 0.2);
-  font-size: 0.9rem;
-}
-
-/* ปรับให้เข้ากับหน้าจอมือถือ */
-@media (max-width: 768px) {
-  nav ul {
-    gap: 0.8rem;
-    justify-content: center;
-    width: 100%;
-  }
-  h1 {
-    font-size: 1.6rem;
-  }
-}
