@@ -1,121 +1,65 @@
-/* ==========================================
-   1. นำเข้าฟอนต์สวยงาม และตั้งค่าพื้นฐาน
-   ========================================== */
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap');
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ตั้งค่าฟอนต์และพื้นหลัง */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f7; /* สีพื้นหลัง */
+        }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Kanit', sans-serif;
-}
+        /* ส่วนเมนูบาร์ */
+        .navbar {
+            background-color: #ffffff; /* สีบาร์ */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
 
-/* ==========================================
-   2. พื้นหลังธีมกาแล็กซี & เอฟเฟกต์ดวงดาว
-   ========================================== */
-body {
-  background: linear-gradient(135deg, #0b0b2b 0%, #191947 40%, #2d1b69 70%, #1a1040 100%);
-  color: #e6f0ff;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-}
+        /* จัดวางลิงก์เมนูให้อยู่ตรงกลาง */
+        .nav-container {
+            display: flex;
+            justify-content: center; /* จัดให้อยู่ตรงกลางหน้าจอ */
+            gap: 30px; /* ระยะห่างระหว่างเมนู */
+        }
 
-/* สร้างจุดดาวระยิบระยับ */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
-    radial-gradient(1px 1px at 60px 70px, #cce0ff, transparent),
-    radial-gradient(1.5px 1.5px at 50px 160px, #b3c7ff, transparent),
-    radial-gradient(2px 2px at 90px 40px, #e0e9ff, transparent),
-    radial-gradient(1px 1px at 130px 80px, #d4e0ff, transparent);
-  background-size: 200px 200px;
-  animation: twinkle 8s ease-in-out infinite;
-  z-index: -1;
-}
+        /* สไตล์ของลิงก์แต่ละอัน */
+        .nav-link {
+            text-decoration: none;
+            color: #333333; /* สีตัวอักษรปกติ */
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px; /* ระยะห่างระหว่างไอคอนกับตัวอักษร */
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
 
-@keyframes twinkle {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-}
+        /* เอฟเฟกต์ตอนเอาเมาส์ไปชี้ (Hover) */
+        .nav-link:hover {
+            color: #0071e3; /* เปลี่ยนเป็นสีเน้นตอนชี้ */
+            background-color: #e8f0fe; /* ไฮไลท์พื้นหลังอ่อนๆ */
+        }
+    </style>
+</head>
+<body>
 
-/* ==========================================
-   3. แถบเมนูนำทาง (Navigation Bar)
-   ========================================== */
-nav {
-  background: rgba(11, 11, 43, 0.85);
-  padding: 1rem 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  border-bottom: 1px solid rgba(179, 199, 255, 0.2);
-  backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> หน้าหลัก</a>
+            <a href="about.html" class="nav-link"><i class="fa-solid fa-user"></i> ประวัติส่วนตัว</a>
+            <a href="education.html" class="nav-link"><i class="fa-solid fa-user-graduate"></i> ประวัติการศึกษา</a>
+            <a href="portfolio.html" class="nav-link"><i class="fa-solid fa-briefcase"></i> ผลงานหรือกิจกรรม</a>
+            <a href="contact.html" class="nav-link"><i class="fa-solid fa-address-book"></i> ข้อมูลติดต่อ</a>
+        </div>
+    </nav>
 
-nav .logo {
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  background: linear-gradient(45deg, #b3c7ff, #ff007f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: none;
-}
-
-nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #e6f0ff;
-  text-decoration: none;
-  font-weight: 400;
-  transition: all 0.3s ease;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-}
-
-nav a:hover, nav a.active {
-  background: rgba(131, 56, 236, 0.3);
-  color: #ffffff;
-  box-shadow: 0 0 10px rgba(131, 56, 236, 0.5);
-}
-
-/* ==========================================
-   4. ส่วนเนื้อหาหลัก & หัวข้อ (Typography & Layout)
-   ========================================== */
-.container {
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 0 5%;
-}
-
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  color: #ffffff;
-  border-bottom: 2px solid rgba(179, 199, 255, 0.2);
-  padding-bottom: 0.5rem;
-  text-shadow: 0 0 15px rgba(179, 199, 255, 0.4);
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin: 1.5rem 0 1rem;
-  color: #b3c7ff;
-}
-
-p, li {
+</body>
+</html>
