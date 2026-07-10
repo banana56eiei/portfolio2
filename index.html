@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>หน้าหลัก - My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก | My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f5f5f7; color: #333; }
+        .navbar { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 15px 0; position: sticky; top: 0; }
+        .nav-container { display: flex; justify-content: center; gap: 20px; }
+        .nav-link { text-decoration: none; color: #666; font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 20px; transition: all 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #0071e3; background-color: #e8f0fe; }
+        
+        .container { max-width: 800px; margin: 50px auto; padding: 20px; text-align: center; }
+        .hero-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { font-size: 2.5rem; color: #1d1d1f; margin-top: 20px; }
+        p { font-size: 1.2rem; color: #86868b; line-height: 1.6; }
+        .btn { display: inline-block; background-color: #0071e3; color: white; text-decoration: none; padding: 12px 24px; border-radius: 30px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { background-color: #005bb5; }
+    </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="logo">GALAXY PORTFOLIO</a>
-    <ul>
-      <li><a href="index.html" class="active">หน้าหลัก</a></li>
-      <li><a href="about.html">ประวัติส่วนตัว</a></li>
-      <li><a href="education.html">ประวัติการศึกษา</a></li>
-      <li><a href="works.html">ผลงาน/กิจกรรม</a></li>
-      <li><a href="contact.html">ข้อมูลติดต่อ</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> หน้าหลัก</a>
+            <a href="about.html" class="nav-link"><i class="fa-solid fa-user"></i> ประวัติส่วนตัว</a>
+            <a href="education.html" class="nav-link"><i class="fa-solid fa-user-graduate"></i> ประวัติการศึกษา</a>
+            <a href="portfolio.html" class="nav-link"><i class="fa-solid fa-briefcase"></i> ผลงานหรือกิจกรรม</a>
+            <a href="contact.html" class="nav-link"><i class="fa-solid fa-address-book"></i> ข้อมูลติดต่อ</a>
+        </div>
+    </nav>
 
-  <div class="container">
-    <div class="box" style="text-align: center; padding: 3rem 1.5rem;">
-      <h1 style="border: none; font-size: 2.5rem;">ยินดีต้อนรับสู่พื้นที่แห่งการเรียนรู้ 🌟</h1>
-      <p style="font-size: 1.2rem;">สวัสดีครับ/ค่ะ ฉันชื่อ [ชื่อ-นามสกุล] นักเรียนชั้น ม.6 ที่สนใจในด้าน [ใส่สิ่งที่คุณสนใจ เช่น คอมพิวเตอร์/ศิลปะ/ภาษา]</p>
-      <p>ขอเชิญทุกท่านร่วมเดินทางสำรวจประวัติและผลงานในโปรเจกต์ต่าง ๆ ของฉันผ่านเว็บไซต์นี้ได้เลยครับ</p>
-      <br>
-      <a href="works.html" style="background: rgba(179, 199, 255, 0.3); padding: 0.8rem 1.5rem; color: #fff; text-decoration: none; border-radius: 20px; border: 1px solid #b3c7ff; transition: 0.3s;">สำรวจผลงานของฉัน 🚀</a>
+    <div class="container">
+        <img src="https://via.placeholder.com/200" alt="Profile Picture" class="hero-img">
+        <h1>ยินดีต้อนรับสู่ Portfolio ของฉัน</h1>
+        <p>สวัสดีครับ/ค่ะ ฉันเป็นนักเรียนชั้นมัธยมศึกษาปีที่ 6 ที่มีความสนใจและมุ่งมั่นในด้าน [ใส่ชื่อคณะหรือสาขาที่อยากเข้า] เว็บไซต์นี้รวบรวมประวัติ ผลงาน และกิจกรรมต่างๆ ของฉันไว้ เชิญรับชมได้เลยครับ/ค่ะ</p>
+        <a href="about.html" class="btn">ทำความรู้จักฉันเพิ่มขึ้น</a>
     </div>
-  </div>
-
-  <footer>
-    <p>© 2026 Developed by [ชื่อของคุณ] | ม.6 Portfolio</p>
-  </footer>
 
 </body>
 </html>
