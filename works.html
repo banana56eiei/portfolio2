@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ผลงานหรือกิจกรรม - My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลงานหรือกิจกรรม | My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f5f5f7; color: #333; }
+        .navbar { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 15px 0; }
+        .nav-container { display: flex; justify-content: center; gap: 20px; }
+        .nav-link { text-decoration: none; color: #666; font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 20px; transition: all 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #0071e3; background-color: #e8f0fe; }
+        
+        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+        h2 { color: #0071e3; border-bottom: 2px solid #e8f0fe; padding-bottom: 10px; margin-bottom: 30px;}
+        
+        /* จัดเลย์เอาต์การ์ดกิจกรรม */
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; background-color: #ddd; }
+        .card-content { padding: 20px; }
+        .card-title { font-size: 1.2rem; font-weight: bold; margin: 0 0 10px 0; color: #1d1d1f; }
+        .card-text { color: #666; font-size: 0.95rem; line-height: 1.5; }
+    </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="logo">GALAXY PORTFOLIO</a>
-    <ul>
-      <li><a href="index.html">หน้าหลัก</a></li>
-      <li><a href="about.html">ประวัติส่วนตัว</a></li>
-      <li><a href="education.html">ประวัติการศึกษา</a></li>
-      <li><a href="works.html" class="active">ผลงาน/กิจกรรม</a></li>
-      <li><a href="contact.html">ข้อมูลติดต่อ</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> หน้าหลัก</a>
+            <a href="about.html" class="nav-link"><i class="fa-solid fa-user"></i> ประวัติส่วนตัว</a>
+            <a href="education.html" class="nav-link"><i class="fa-solid fa-user-graduate"></i> ประวัติการศึกษา</a>
+            <a href="portfolio.html" class="nav-link active"><i class="fa-solid fa-briefcase"></i> ผลงานหรือกิจกรรม</a>
+            <a href="contact.html" class="nav-link"><i class="fa-solid fa-address-book"></i> ข้อมูลติดต่อ</a>
+        </div>
+    </nav>
 
-  <div class="container">
-    <h1>🏆 ผลงานและกิจกรรม (Projects & Activities)</h1>
-    
-    <div class="box">
-      <h2>1. กิจกรรม/รางวัลที่ 1</h2>
-      <p><strong>รายละเอียด:</strong> [เขียนอธิบายสั้น ๆ ว่าทำอะไร ได้เรียนรู้อะไรจากกิจกรรมนี้]</p>
-      </div>
+    <div class="container">
+        <h2><i class="fa-solid fa-briefcase"></i> ผลงานและกิจกรรม (Projects & Activities)</h2>
+        
+        <div class="portfolio-grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/400x200" alt="Activity 1" class="card-img">
+                <div class="card-content">
+                    <div class="card-title">แข่งขันทักษะวิชาการระดับภาค</div>
+                    <div class="card-text">ได้รับรางวัลรองชนะเลิศอันดับ 1 ในการประกวดโครงงานวิทยาศาสตร์ประเภทสิ่งประดิษฐ์ ประจำปี 2568</div>
+                </div>
+            </div>
 
-    <div class="box">
-      <h2>2. กิจกรรม/รางวัลที่ 2</h2>
-      <p><strong>รายละเอียด:</strong> [เขียนอธิบายสิ่งที่ภาคภูมิใจ หรือหน้าที่ที่ได้รับมอบหมาย]</p>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x200" alt="Activity 2" class="card-img">
+                <div class="card-content">
+                    <div class="card-title">ประธานชมรมคอมพิวเตอร์</div>
+                    <div class="card-text">ทำหน้าที่จัดกิจกรรมอบรมการเขียนโค้ดเบื้องต้นให้กับรุ่นน้องในโรงเรียน มีผู้เข้าร่วมกว่า 50 คน</div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <footer>
-    <p>© 2026 Developed by [ชื่อของคุณ] | ม.6 Portfolio</p>
-  </footer>
 
 </body>
 </html>
