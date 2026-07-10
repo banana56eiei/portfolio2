@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ข้อมูลติดต่อ - My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลติดต่อ | My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f5f5f7; color: #333; }
+        .navbar { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 15px 0; }
+        .nav-container { display: flex; justify-content: center; gap: 20px; }
+        .nav-link { text-decoration: none; color: #666; font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 20px; transition: all 0.3s; }
+        .nav-link:hover, .nav-link.active { color: #0071e3; background-color: #e8f0fe; }
+        
+        .container { max-width: 600px; margin: 40px auto; padding: 30px; background: white; border-radius: 12px; text-align: center; }
+        h2 { color: #0071e3; border-bottom: 2px solid #e8f0fe; padding-bottom: 10px; margin-bottom: 30px; text-align: left; }
+        
+        .contact-method { display: flex; align-items: center; justify-content: flex-start; gap: 20px; padding: 15px; margin-bottom: 15px; background-color: #f9f9f9; border-radius: 8px; font-size: 1.1rem; }
+        .contact-method i { font-size: 1.5rem; width: 30px; text-align: center; }
+        .fa-envelope { color: #ea4335; }
+        .fa-phone { color: #34a853; }
+        .fa-facebook { color: #1877f2; }
+        .fa-instagram { color: #e1306c; }
+    </style>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html" class="logo">GALAXY PORTFOLIO</a>
-    <ul>
-      <li><a href="index.html">หน้าหลัก</a></li>
-      <li><a href="about.html">ประวัติส่วนตัว</a></li>
-      <li><a href="education.html">ประวัติการศึกษา</a></li>
-      <li><a href="works.html">ผลงาน/กิจกรรม</a></li>
-      <li><a href="contact.html" class="active">ข้อมูลติดต่อ</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> หน้าหลัก</a>
+            <a href="about.html" class="nav-link"><i class="fa-solid fa-user"></i> ประวัติส่วนตัว</a>
+            <a href="education.html" class="nav-link"><i class="fa-solid fa-user-graduate"></i> ประวัติการศึกษา</a>
+            <a href="portfolio.html" class="nav-link"><i class="fa-solid fa-briefcase"></i> ผลงานหรือกิจกรรม</a>
+            <a href="contact.html" class="nav-link active"><i class="fa-solid fa-address-book"></i> ข้อมูลติดต่อ</a>
+        </div>
+    </nav>
 
-  <div class="container">
-    <h1>📞 ข้อมูลติดต่อ (Contact)</h1>
-    
-    <div class="box">
-      <h2>ช่องทางการติดต่อ</h2>
-      <p>📧 <strong>Email:</strong> your.email@example.com</p>
-      <p>📞 <strong>เบอร์โทรศัพท์:</strong> 0xx-xxx-xxxx</p>
-      <p>🌐 <strong>GitHub / Facebook / IG:</strong> [ใส่ลิงก์ของคุณ]</p>
+    <div class="container">
+        <h2><i class="fa-solid fa-address-book"></i> ข้อมูลติดต่อ (Contact)</h2>
+        
+        <div class="contact-method">
+            <i class="fa-solid fa-envelope"></i>
+            <span><strong>Email:</strong> myemail@example.com</span>
+        </div>
+        <div class="contact-method">
+            <i class="fa-solid fa-phone"></i>
+            <span><strong>เบอร์โทรศัพท์:</strong> 098-XXX-XXXX</span>
+        </div>
+        <div class="contact-method">
+            <i class="fa-brands fa-facebook"></i>
+            <span><strong>Facebook:</strong> MyFacebookName</span>
+        </div>
+        <div class="contact-method">
+            <i class="fa-brands fa-instagram"></i>
+            <span><strong>Instagram:</strong> @myinstagram</span>
+        </div>
     </div>
-  </div>
-
-  <footer>
-    <p>© 2026 Developed by [ชื่อของคุณ] | ม.6 Portfolio</p>
-  </footer>
 
 </body>
 </html>
